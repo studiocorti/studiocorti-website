@@ -2,7 +2,7 @@
 @import 'rupture'
 
 // Color Palette
-_main = #1fb3ff
+_main = #009cff
 _alternative = #082b82
 _text = #8b8b8b
 
@@ -51,6 +51,23 @@ ul.list-circle
   padding-left 1rem
   li
     padding-left 0.3rem
+
+ul.tab-list
+  li
+    color rgba(_text, 0.8)
+    border 2px solid transparent
+    border-radius 5px
+    cursor pointer
+    strong
+      text-transform uppercase
+      font-weight 500
+      font-size 0.9rem
+    &:hover
+      color _text
+      border-color rgba(#333, 0.1)
+    &.active
+      color _main
+      border-color rgba(#333, 0.1)
 
 h1
   color _text
