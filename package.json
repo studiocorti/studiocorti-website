@@ -1,0 +1,27 @@
+{
+  "name": "nu",
+  "version": "3.0.2",
+  "description": "Build simple websites in no time",
+  "scripts": {
+    "dev": "sh bin/build.sh"
+  },
+  "keywords": [
+    "template",
+    "site",
+    "starter",
+    "fast"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^1.10.3",
+    "http-server": "^0.8.5",
+    "jade": "^1.11.0",
+    "nib": "^1.1.0",
+    "rupture": "^0.6.1",
+    "stylus": "^0.52.4"
+  },
+  "devDependencies": {
+    "eslint": "^1.8.0"
+  }
+}
