@@ -118,3 +118,60 @@ header
     transition all 0.2s ease
     span.block
       padding-top 3px
+
+.hexagon-container
+  text-align center
+  .separator
+    margin-top -25px
+
+  .hexagon
+    position relative
+    width 170px
+    height 98.15px
+    background-color #cccccc
+    margin 49.07px 0
+    display inline-block
+    transition background 0.3s ease
+    p
+      position absolute
+      top 50%
+      left 10px
+      right 10px
+      text-align center
+      transform translate(0, -50%)
+      color #FFF
+      text-transform uppercase
+      font-size 0.9rem
+      font-weight 600
+      margin 0
+      line-height 1.2em
+
+    & + .hexagon
+      margin-left 40px
+
+    &:before,
+    &:after
+      content ''
+      position absolute
+      width 0
+      border-left 85px solid transparent
+      border-right 85px solid transparent
+      left 0
+
+    &:before
+      bottom 100%
+      border-bottom 49.07px solid #cccccc
+      transition border-bottom-color 0.3s ease
+
+    &:after
+      top 100%
+      width 0
+      border-top 49.07px solid #cccccc
+      transition border-top-color 0.3s ease
+
+    &:hover
+      background-color _main
+      &:before
+        border-bottom-color @background-color
+      &:after
+        border-top-color @background-color
