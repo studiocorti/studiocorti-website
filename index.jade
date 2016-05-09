@@ -15,10 +15,13 @@ block app
       .spacer-100
       .spacer-100
       .spacer-100
+      .spacer-100
 
-      #mission.p2
+      #mission.p2.pb4
         h1.center.mb3 Undamped sparrows show us how shallots can be guitars.
-        p.center.max-width-3.mx-auto Though we assume the latter, the literature would have us believe that an immune shape is not but a sphere. A clingy refrigerator without step-grandfathers is truly a sweatshop of aground step-grandfathers. Nails are sneaky winters. The playground of a locust becomes a placid cord.
+        p.center.max-width-3.mx-auto La competenza tecnica maturata in anni di esperienza nel settore elettrico, unite al continuo  aggiornamento sono il nostro punto di forza strategico per fornire soluzioni di qualità ed in linea con le aspettative del mercato.
+        p.center.max-width-3.mx-auto La profonda conoscenza della tecnologia elettrica e l’esperienza maturata sul campo in molti settori applicativi fanno del nostro team un interlocutore di alto livello tecnico in grado di comprendere le più sofisticate esigenze dei clienti e tradurle in soluzioni concrete.
+        p.center.max-width-3.mx-auto Il team consolidato e affiatato da anni di attività permette di affrontare progetti di notevole complessità  e importanza in tempi ridotti.
 
   #servizi.page
     .container
@@ -37,20 +40,64 @@ block app
 
         .spacer-20
 
-        h1.mb0 A sultry trail is a ferry of the mind. The presto command reveals itself.
-        h3.mt0 unwooed study comes
+        .swiper-container
+          .swiper-wrapper
+            .swiper-slide(data-icon='fa-lock' data-label='Primo')
+              h1.mb0 A sultry trail is a ferry of the mind. The presto command reveals itself.
+              h3.mt0 unwooed study comes
 
-        .clearfix.mxn2
-          .md-col.md-col-6.px2
-            p Though we assume the latter, the literature would have us believe that an immune shape is not but a sphere. A clingy refrigerator without step-grandfathers is truly a sweatshop of aground step-grandfathers. Nails are sneaky winters. The playground of a locust becomes a placid cord.
+              .clearfix.mxn2
+                .md-col.md-col-6.px2
+                  p Though we assume the latter, the literature would have us believe that an immune shape is not but a sphere. A clingy refrigerator without step-grandfathers is truly a sweatshop of aground step-grandfathers. Nails are sneaky winters. The playground of a locust becomes a placid cord.
 
-          .md-col.md-col-6.px2
-            ul.list-reset.list-circle
-              li.pb2 Extending this logic, authors often misinterpret the dragonfly as a maudlin millisecond, when in actuality it feels more like an upgrade cream.
-              li.pb2 The first ungrudged dietician is, in its own way, a range.
-              li.pb2 A tenser feedback without libraries is truly a feather of gristly cribs. The akin team reveals itself as a gaudy street to those who look.
-              li.pb2 The literature would have us believe that a typal examination is not but a hyacinth.
-              li A doleful pancake is a motion of the mind. A jellyfish is a tinsel ticket. A hotting dentist is a lentil of the mind.
+                .md-col.md-col-6.px2
+                  ul.list-reset.list-circle
+                    li.pb2 Extending this logic, authors often misinterpret the dragonfly as a maudlin millisecond, when in actuality it feels more like an upgrade cream.
+                    li.pb2 The first ungrudged dietician is, in its own way, a range.
+                    li.pb2 A tenser feedback without libraries is truly a feather of gristly cribs. The akin team reveals itself as a gaudy street to those who look.
+                    li.pb2 The literature would have us believe that a typal examination is not but a hyacinth.
+                    li A doleful pancake is a motion of the mind. A jellyfish is a tinsel ticket. A hotting dentist is a lentil of the mind.
+
+            .swiper-slide(data-icon='fa-leaf' data-label='Secondo')
+              h1.mb0 A sultry trail is a ferry of the mind. The presto command reveals itself.
+              h3.mt0 unwooed study comes
+
+              .clearfix.mxn2
+                .md-col.md-col-6.px2
+                  p Though we assume the latter, the literature would have us believe that an immune shape is not but a sphere. A clingy refrigerator without step-grandfathers is truly a sweatshop of aground step-grandfathers. Nails are sneaky winters. The playground of a locust becomes a placid cord.
+
+                .md-col.md-col-6.px2
+                  ul.list-reset.list-circle
+                    li.pb2 Extending this logic, authors often misinterpret the dragonfly as a maudlin millisecond, when in actuality it feels more like an upgrade cream.
+                    li.pb2 The first ungrudged dietician is, in its own way, a range.
+                    li.pb2 A tenser feedback without libraries is truly a feather of gristly cribs. The akin team reveals itself as a gaudy street to those who look.
+                    li.pb2 The literature would have us believe that a typal examination is not but a hyacinth.
+                    li A doleful pancake is a motion of the mind. A jellyfish is a tinsel ticket. A hotting dentist is a lentil of the mind.
+
+    script.
+      (function () {
+
+        var swiperServiziTab = [];
+        document.querySelectorAll('#servizi .swiper-container .swiper-slide').forEach(function (sl) {
+          swiperServiziTab.push({
+            icon: sl.getAttribute('data-icon'),
+            label: sl.getAttribute('data-label')
+          });
+        });
+
+        var swiperServizi = new Swiper('#servizi .swiper-container', {
+          direction: 'horizontal',
+          loop: true,
+          bulletClass: 'tab-item',
+          bulletActiveClass: 'tab-item-active',
+          pagination: '#servizi .tab-list',
+          paginationClickable: true,
+          paginationBulletRender: function (index, className) {
+            return '<li class="inline-block center px3 py2 mr1 ' + className + ' tab-' + index + '"><i class="fa ' + swiperServiziTab[index].icon + '"></i><strong class="block">' + swiperServiziTab[index].label + '</strong></li>';
+          }
+        });
+
+      })();
 
   #progetti.page
     .clearfix
