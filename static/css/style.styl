@@ -130,6 +130,7 @@ header
 
 .hexagon-container
   text-align center
+  width 100%
   overflow hidden
   .separator
     margin-top -25px
@@ -161,6 +162,17 @@ header
       border 15px solid transparent
       border-right-color #FFF
 
+    &.tooltip-left
+      right 100%
+      left auto
+      margin-right 30px
+      margin-left 0
+      &:before
+        right -30px
+        left auto
+        border-left-color #FFF
+        border-right-color transparent
+
   .hexagon
     position relative
     width 170px
@@ -173,6 +185,9 @@ header
       .tooltip
         margin-left 20px
         opacity 1
+        &.tooltip-left
+          margin-right 20px
+          margin-left 0
     p
       position absolute
       top 50%
