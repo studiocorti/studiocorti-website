@@ -4,3 +4,4 @@ Thumbs.db
 *.log
 *.html
 *.css
+dist/
