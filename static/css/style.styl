@@ -26,6 +26,9 @@ _spacer = 5, 10, 20, 40, 50, 60, 80, 100
 for _s in _spacer
   .spacer-{ _s }
     height ( _s * 1px )
+    
+a.link
+  color _main
 
 .padding
   padding 20px
@@ -235,6 +238,13 @@ header
         border-bottom-color @background-color
       &:after
         border-top-color @background-color
+        
+img.client-logo
+  border none
+  margin 4px
+  display block
+  width 150px
+  height 150px
 
 #contatti
   #map
