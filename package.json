@@ -19,7 +19,7 @@
     "jade": "^1.11.0",
     "nib": "^1.1.0",
     "rupture": "^0.6.1",
-    "stylus": "^0.52.4"
+    "stylus": "^0.54.5"
   },
   "devDependencies": {
     "eslint": "^1.8.0"
