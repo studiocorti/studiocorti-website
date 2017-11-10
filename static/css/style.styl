@@ -1,6 +1,10 @@
 @import 'nib'
 @import 'rupture'
 
+rupture.scale = 0 35.5em 48em 64em 80em
+rupture.anti-overlap = -0.5px
+rupture.scale-names = 'sm' 'md' 'lg' 'xl' 'hd'
+
 // Color Palette
 _main = #009cff
 _alternative = #082b82
@@ -109,10 +113,34 @@ h3
 #intro
   color #FFF
   background-color _alternative
+  position relative
   h1
     color #FFF
   p
     font-weight 400
+  .spacer-100
+    position relative
+  img.arrow
+    position absolute
+    display block
+    max-width 100%
+    height auto
+    &.a01
+      top 40%
+      left 0%
+    &.a02
+      top 20%
+      right -10%
+    &.a03
+      left -10%
+      bottom -10%
+  
+  +below('md')
+    .spacer-100
+      height 50px
+      img
+        display none
+      
 
 header
   font-size 0.8rem
