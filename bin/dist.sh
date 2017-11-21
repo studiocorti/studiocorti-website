@@ -6,4 +6,4 @@
 rm *.html
 rm static/css/*.css
 ./node_modules/.bin/jade *.jade -o .
-./node_modules/.bin/stylus --use nib --use rupture -c  .
+./node_modules/.bin/stylus --use nib --use rupture -c ./static/css/
